@@ -37,6 +37,9 @@ h1 {
     transition: all 500ms ease;
     transform-style: preserve-3d;
 }
+.front {
+    opacity: 0;
+}
 .front>img {
     position: absolute;
     width: 100px;
@@ -44,6 +47,7 @@ h1 {
     margin-top: 20px;
     margin-left: 10px;
 }
+
 .back>img {
     position: absolute;
     width: 100px;
@@ -51,10 +55,15 @@ h1 {
     margin-top: 20px;
     margin-left: 10px;
     background-size: cover;
-    backface-visibility: hidden;
 }
 .flip {
     transform: rotateY(180deg);
+}
+.flip>.back {
+    opacity: 0;
+}
+.flip>.front {
+    opacity: 1;
 }
 
 

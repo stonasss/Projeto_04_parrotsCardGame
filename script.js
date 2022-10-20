@@ -21,6 +21,7 @@ function loadGame(){
 }
 
 function loadCards(){
+    deckCards.sort(comparador); // Após esta linha, a minhaArray estará embaralhada
     for (let i = 0; i < deckCards.length; i++){
         deckDiv.innerHTML +=
             `<div onclick="flipCard(this)" class="card">
@@ -28,8 +29,14 @@ function loadCards(){
                 <div class="back"><img src="./assets/back.png"></div>
             </div>`
     }
+    
 }
 
 function flipCard(element){
     element.classList.add("flip");
+}
+
+// Esta função pode ficar separada do código acima, onde você preferir
+function comparador() { 
+	return Math.random() - 0.5; 
 }
