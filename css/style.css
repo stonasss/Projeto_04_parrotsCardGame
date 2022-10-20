@@ -26,19 +26,39 @@ h1 {
     flex-wrap: wrap;
 }
 .card {
+    position: relative;
     box-sizing: border-box;
-    width: 117px;
+    width: 117px;    
     height: 146px;
     margin: 0 10px 35px 10px; 
     background-color: #A7E9AF;
     border: 1px solid #99CEA8;
     border-radius: 5px;
+    transition: all 500ms ease;
+    transform-style: preserve-3d;
 }
-.card img {
+.front>img {
+    position: absolute;
     width: 100px;
-    margin-top: 24px;
+    height: 100px;
+    margin-top: 20px;
     margin-left: 10px;
 }
+.back>img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-size: cover;
+    backface-visibility: hidden;
+}
+.flip {
+    transform: rotateY(180deg);
+}
+
+
+
 
 
 @media only screen and (max-width: 335px){
