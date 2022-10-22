@@ -48,11 +48,23 @@ h1 {
     background-color: #A7E9AF;
     border: 1px solid #99CEA8;
     border-radius: 5px;
-    transition: all 500ms ease;
+    transition: all 1000ms;
     transform-style: preserve-3d;
 }
 .front {
     opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    -o-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    transition-delay: 100ms;
+}
+.back {
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    -o-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    transition-delay: 100ms
 }
 .front>img {
     position: absolute;

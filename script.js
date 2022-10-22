@@ -12,6 +12,7 @@ let time = Number(0);
 
 function loadGame(){
     cardNumber = Number (prompt ('Entre 4 a 14, somente pares, quantas cartas você quer?'));
+    parrotGifs.sort(comparador);
 
     if (cardNumber < 4 || cardNumber > 14 || cardNumber % 2 !== 0){
         return loadGame()
@@ -99,6 +100,7 @@ function compareCard() {
 
 function victory(){
     alert(`'Parabéns! Você venceu em ${time} segundos após ${timesClicked} jogadas.'`);
+    replayGame();
 }
 
 function timer(){
@@ -111,6 +113,18 @@ function timer(){
         if (cardsMatched == cardNumber){
             clearInterval(count)
         }
+    }
+}
+
+function replayGame(){
+    const answer = prompt('Gostaria de jogar novamente?');
+
+    if (answer == 'sim') {
+        location.reload();
+    } else if (answer == 'não') {
+        return false;
+    } else {
+        return replayGame();
     }
 }
 
