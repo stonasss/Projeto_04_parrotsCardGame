@@ -51,6 +51,10 @@ h1 {
     transition: all 1000ms;
     transform-style: preserve-3d;
 }
+.card:hover {
+    cursor: pointer;
+    border: 5px solid green;
+}   
 .front {
     opacity: 0;
     -webkit-transition: opacity 400ms ease-in;
