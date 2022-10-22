@@ -7,6 +7,7 @@ const parrotGifs = ['1.gif', '2.gif', '3.gif', '4.gif', '5.gif', '6.gif', '7.gif
 let parrot = document.getElementById('card');
 let parrot1
 let parrot2
+let time = Number(0);
 
 
 function loadGame(){
@@ -90,14 +91,27 @@ function compareCard() {
             if (cardsMatched == cardNumber){
             setTimeout(() => {
                 victory();
-            },1000)
+            },400)
             }
         }
     }
 }
 
 function victory(){
-    alert(`'Parabéns! Você venceu com um número de ${timesClicked}'`)
+    alert(`'Parabéns! Você venceu em ${time} segundos após ${timesClicked} jogadas.'`);
+}
+
+function timer(){
+    count = setInterval(timeCounted, 1000);
+
+    function timeCounted(){    
+        const timeContainer = document.querySelector(".time");
+        timeContainer.innerHTML = time;
+        time++;
+        if (cardsMatched == cardNumber){
+            clearInterval(count)
+        }
+    }
 }
 
 // Esta função pode ficar separada do código acima, onde você preferir

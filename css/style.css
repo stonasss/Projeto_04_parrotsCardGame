@@ -4,12 +4,26 @@ body {
     width: 872px;
     margin: auto;
 }
-.title{
+.top {
     width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.title{
     margin: auto;
     margin-top: 40px;
     text-align: center;
 }
+.counter {
+    font-family: Roboto;
+    text-align: center;
+    margin: 40px 80px 0 0;
+}
+.time {
+    font-size: 48px;
+}
+
 h1 {
     color: #75B79E;
     font-weight: 700;
@@ -81,12 +95,24 @@ h1 {
         width: 100%;
         margin: auto;
     }
+    .top{
+        margin-left: 40px;
+    }
     .title {
         width: 312px;
         font-size: 36px;
         margin: auto;
         margin-top: 40px;
         text-align: center;
+    }
+    .counter{
+        padding-top: 40px;
+    }
+    .time{
+        font-size: 30px;
+    }
+    .measure{
+        font-size: 12px;
     }
     h1 {
         font-size: 36px;
